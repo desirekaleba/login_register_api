@@ -4,7 +4,7 @@ This is an example of an api which has login, register routes to allow a use to 
 
 ## Technologies used
 
-- MongoDD
+- MongoDB
 - Node
 - Express
 
