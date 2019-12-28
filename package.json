@@ -4,9 +4,11 @@
   "description": "MERN login/register example with auth",
   "main": "./server/server.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "start": "node ./server/server.js",
     "server": "nodemon ./server/server.js",
-    "test": "test"
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [
     "MERN",
