@@ -1,38 +1,18 @@
-# Express Resiger/login api example
+# MERN Resiger/login example
 
-This is an example of an api which has login, register routes to allow a use to register and login with full authentication and security
+This is an example of MERN stack application which was developed using ReactJS for UI and Express for the api (backend)
 
 ## Technologies used
 
 - MongoDB
 - Node
 - Express
+- ReactJS
+- Redux
 
 ## Packages used
 
-- `bcryptjs` : used to hash passwords
-
-- `body-parser` : to parse request bodies
-
-- `express` : to make our routing, requests and responses
-
-- `is-empty` : to validate our inputs
-
-- `jsonwebtoken` : for authorization
-
-- `mongoose` : to interact with our Mongo database
-
-- `passport` : to authenticate requests
-
-- `passport-jwt` :  for authenticating with a JSON Web Token (JWT); lets you authenticate endpoints using a JWT
-
-- `validator` : alongside `is-empty`
-
-- `nodemon` : to watch our server
-
-### package.json
-
-Below is the `package.json`
+### Server side package.json
 
 ```json
 {
@@ -41,9 +21,11 @@ Below is the `package.json`
   "description": "MERN login/register example with auth",
   "main": "./server/server.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "start": "node ./server/server.js",
     "server": "nodemon ./server/server.js",
-    "test": "test"
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [
     "MERN",
@@ -68,6 +50,54 @@ Below is the `package.json`
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
+  }
+}
+
+```
+
+### client side package.json
+
+```json
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.0",
+    "classnames": "^2.2.6",
+    "jwt-decode": "^2.2.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:5000",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
 
