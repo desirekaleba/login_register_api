@@ -12,11 +12,11 @@ class Landing extends Component{
                     <div className="row">
                         <div className="col s12 center-align">
                             <h4>
-                                <b>A</b>register/login/auth app with
+                                <b>A</b> register/login/auth app with
                                 <span style={{
                                     fontFamily: "monospace"
                                     }}
-                                >MERN</span> stack
+                                > MERN</span> stack
                             </h4>
                             <p className="flow-text grey-text text-darken-1">
                                 A full-stack app with user authentication via 
@@ -46,7 +46,7 @@ class Landing extends Component{
                                         borderRadius: "3px",
                                         letterSpacing: "1.5px"
                                     }}
-                                className="btn btn-large btn-flat waves-effect white black-text"
+                                className="btn btn-large btn-flat waves-effects white black-text"
                                 >
                                     Log In
                                 </Link>
