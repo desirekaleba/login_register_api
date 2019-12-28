@@ -75,7 +75,7 @@ class Register extends Component{
                                     id="name"
                                     type="text"
                                 />
-                                <lable htmlFor="name">Name</lable>
+                                <label htmlFor="name">Name</label>
                             </div>
 
                             <div className="input-field col s12">
