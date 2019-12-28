@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-class Login extends Components{
+class Login extends Component{
 
     constructor(){
         super();
@@ -32,6 +32,7 @@ class Login extends Components{
 
     render(){
 
+        const { errors } = this.state;
         return (
 
             <div className="container">
@@ -69,11 +70,11 @@ class Login extends Components{
                                     <input
                                         onChange={this.onChange}
                                         value={this.state.email}
-                                        error={errors.email}
+                                        error={ errors.email }
                                         id="email"
                                         type="email"
                                     />
-                                    <label htmlFor="emaiil">Email</label>
+                                    <label htmlFor="email">Email</label>
                                 </div>
 
                                 <div className="input-field col s12">
